@@ -1,0 +1,14 @@
+.file-box{
+    display: inline-block;
+    overflow: hidden;
+    border: 1.5px dashed green;
+    border-radius: 3px;
+    width:100px;
+    height:100px;
+    font-family: "Gill Sans", inherit;
+}
+
+.file-box p{
+    word-wrap: break-word;
+    font-size:12px;
+}

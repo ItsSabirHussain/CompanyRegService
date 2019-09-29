@@ -12,28 +12,24 @@ import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import PolicyIcon from "@material-ui/icons/Policy";
 import PeopleIcon from "@material-ui/icons/People";
-import NotificationImportantIcon from "@material-ui/icons/NotificationImportant";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
-import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
 import Main from "./cusermain";
-import ProBidStatus from "./probidstatus";
-import UploadProject from "./uploadProject";
-import Rate from "./rate";
-import UploadProReq from "./uploadproreq";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import PublishIcon from "@material-ui/icons/Publish";
-import UploadForm from "./UploadForm";
-import Modifications from "./modifications";
+import Modifications from "./updatecompany";
+import Notifications from "./notifications";
+import PaymentForm from "./PaymentForm";
+import CompanyReg from "./companyreg";
+import UpdatePro from "./updatecompany";
+import Upload from "./Upload";
+import FileUpload from "./fileupload";
 
 const drawerWidth = 240;
 
@@ -203,29 +199,41 @@ export default function CUserDashboard(props) {
             <ListItem
               button
               component={Link}
-              to="/cuserdashboard/uploadproject"
+              to="/cuserdashboard/notifications"
             >
               <ListItemIcon>
                 <PublishIcon fontSize="large" />
               </ListItemIcon>
 
-              <ListItemText primary="Upload Project" />
+              <ListItemText primary="Notifications" />
             </ListItem>
-            <ListItem button component={Link} to="/cuserdashboard/probidstatus">
+            <ListItem button component={Link} to="/cuserdashboard/companyreg">
               <ListItemIcon>
                 <PeopleIcon fontSize="large" />
               </ListItemIcon>
-              <ListItemText primary="Project Bid Status" />
+              <ListItemText primary="Company Reg." />
             </ListItem>
             <ListItem
               button
               component={Link}
-              to="/cuserdashboard/modifications"
+              to="/cuserdashboard/updateproject"
             >
               <ListItemIcon>
                 <PermIdentityIcon fontSize="large" />
               </ListItemIcon>
-              <ListItemText primary="Modifications" />
+              <ListItemText primary="Update Company" />
+            </ListItem>
+            <ListItem button component={Link} to="/cuserdashboard/payment">
+              <ListItemIcon>
+                <PermIdentityIcon fontSize="large" />
+              </ListItemIcon>
+              <ListItemText primary="Payment" />
+            </ListItem>
+            <ListItem button component={Link} to="/cuserdashboard/fileupload">
+              <ListItemIcon>
+                <PermIdentityIcon fontSize="large" />
+              </ListItemIcon>
+              <ListItemText primary="File Upload" />
             </ListItem>
           </div>
         </List>
@@ -236,19 +244,23 @@ export default function CUserDashboard(props) {
         <Route exact path="/cuserdashboard" component={Main} />
         <Route
           exact
-          path="/cuserdashboard/uploadproject"
-          component={UploadForm}
+          path="/cuserdashboard/notifications"
+          component={Notifications}
         />
+        <Route exact path="/cuserdashboard/companyreg" component={CompanyReg} />
         <Route
           exact
-          path="/cuserdashboard/probidstatus"
-          component={ProBidStatus}
+          path="/cuserdashboard/updateproject"
+          component={UpdatePro}
         />
+        <Route exact path="/cuserdashboard/payment" component={PaymentForm} />
+
         <Route
           exact
-          path="/cuserdashboard/modifications"
+          path="/cuserdashboard/updatecompany"
           component={Modifications}
         />
+        <Route exact path="/cuserdashboard/fileupload" component={FileUpload} />
       </Switch>
     </div>
   );

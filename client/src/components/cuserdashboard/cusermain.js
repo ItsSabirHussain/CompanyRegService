@@ -115,11 +115,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Main(props) {
-  const bStyle = buttonStyles();
   const classes = useStyles();
   const [cuser, setCuser] = React.useState({
     FullName: "",
-    Email: ""
+    Email: "",
+    ACN: "",
+    CompanyName: "",
+    Status: ""
   });
 
   useEffect(() => {
@@ -130,7 +132,10 @@ export default function Main(props) {
           console.log(res);
           setCuser({
             Email: res.data.Email,
-            FullName: res.data.FullName
+            FullName: res.data.FullName,
+            ACN: res.data.ACN,
+            CompanyName: res.data.CompanyName,
+            Status: res.data.Status
           });
           console.log(res);
         })
@@ -143,12 +148,14 @@ export default function Main(props) {
       <div className={classes.appBarSpacer} />
       <Container maxWidth="lg" className={classes.container}>
         <Grid container spacing={3}>
-          {/* User Details */}
           <Grid item xs={12} md={8} lg={9}>
             <div>
               <Jumbotron>
-                <h1 className="display-6">Name : {cuser.FullName}</h1>
-                <p className="lead">Email: {cuser.Email}</p>
+                <h1 className="display-6">User Name : {cuser.FullName}</h1>
+                <p className="lead">Email : {cuser.Email}</p>
+                <p className="lead">Company Name : {cuser.CompanyName}</p>
+                <p className="lead">ACN : {cuser.ACN}</p>
+                <p className="lead">Company Status : {cuser.Status}</p>
                 <hr className="my-2" />
                 <p></p>
                 <p className="lead"></p>

@@ -77,7 +77,7 @@ export default function CEOLogin(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          CEO Sign in
+          Admin Sign In
         </Typography>
         <form className={classes.form} noValidate>
           <TextField

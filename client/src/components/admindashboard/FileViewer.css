@@ -1,0 +1,56 @@
+.allfiles-tbl-top-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.tbl-container tr:nth-of-type(even){
+    background-color:rgb(111, 206, 162);
+    color:whitesmoke;
+}
+
+
+::-webkit-scrollbar-thumb{
+background:rgb(51, 192, 126);
+}
+
+::-webkit-scrollbar{
+width: 10px;
+height: 10px;
+}
+
+::-webkit-scrollbar-track{
+background-color:white;
+}
+
+
+.tbl-container thead,
+.tbl-container tbody tr {
+    display:table;
+    width:600px;
+    table-layout:fixed;
+}
+
+.tbl-container tbody{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: block;
+}
+
+
+.file-bar th,
+.file-bar td{
+    min-width:100px;
+    max-width:100px;
+    overflow:hidden;
+}
+
+
+.file-bar-property{
+    min-width:100px;
+    max-width:100px;
+}

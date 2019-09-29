@@ -1,0 +1,43 @@
+.upload-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.upload-tbl td,
+.upload-tbl th
+{
+    vertical-align: top;
+    padding: 5px;
+
+}
+
+
+.upload-tbl th
+{
+    text-align: left;
+}
+
+.dropzone{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    border-width: 2px;
+    border-color: rgb(51, 192, 126);
+    border-style: dotted;
+    border-radius: 5px;
+}
+
+.upload-tbl input[type="submit"]{
+    margin-left:0 !important;
+}
+
+.upload-tbl input[type="text"]{
+    width:99%;
+    height:20px;
+}

@@ -1,0 +1,15 @@
+.download-btn{
+    background-color:inherit;
+    color:green;
+    font-weight: bold;
+    font-size:20px;
+    border:none;
+}
+
+
+
+th.file-name-property,
+td.file-name-property{
+    min-width: 200px;
+    max-width: 200px;
+}

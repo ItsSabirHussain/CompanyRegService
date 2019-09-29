@@ -8,28 +8,28 @@ const ProjectInfo = new Schema({
   CompanyName: {
     type: String
   },
-  ProjectName: {
+  UserName: {
     type: String
   },
-  ProjectDescription: {
+  Address: {
     type: String
   },
-  City: {
+  Type: {
     type: String
   },
-  State: {
+  Status: {
     type: String
   },
-  Zip: {
+  CEOName: {
     type: String
   },
-  Country: {
+  Headquarter: {
     type: String
   },
   Date: {
     type: String
   },
-  Budget: {
+  ACN: {
     type: String
   }
 });
