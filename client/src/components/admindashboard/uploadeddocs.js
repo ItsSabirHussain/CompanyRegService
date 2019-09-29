@@ -123,7 +123,7 @@ export default function UploadedDocs(props) {
   useEffect(() => {
     if (AllStatus.length < 1) {
       axios
-        .post("/getanoti", {})
+        .post("/getuploads", {})
         .then(res => {
           setAllStatus(res.data);
         })

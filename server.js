@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const passport = require("passport");
 const path = require("path");
+const Uploads = require("./models/uploads");
 
 const ceo = require("./routes/ceo");
 const cuser = require("./routes/cuser");
@@ -17,6 +18,11 @@ app.use(fileUpload());
 //File upload code
 // Upload Endpoint
 app.post("/upload", (req, res) => {
+  console.log(req);
+  new Uploads({
+    CompanyName: req.files.file.name,
+    Date: new Date()
+  }).save();
   if (req.files === null) {
     return res.status(400).json({ msg: "No file uploaded" });
   }

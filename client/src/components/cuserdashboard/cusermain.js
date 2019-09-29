@@ -14,7 +14,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      Your Website and Your Name Here.
+      Active Tax Service
       {new Date().getFullYear()}
       {"."}
     </Typography>

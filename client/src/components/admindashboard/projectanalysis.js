@@ -109,7 +109,7 @@ export default function Notifications(props) {
   }
   const Data = p => (
     <tr>
-      <td>{p.data.UserID}</td>
+      <td>{p.data.ID}</td>
       <td>{p.data.UserName}</td>
       <td>{p.data.CompanyName}</td>
       <td>{p.data.Address}</td>

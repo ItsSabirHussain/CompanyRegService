@@ -133,7 +133,7 @@ router.post("/compreq", (req, res) => {
     Type: req.body.Type,
     CEOName: req.body.CEOName,
     Headquarter: req.body.Headquarter,
-    Status: "Pendding",
+    Status: "Pending",
     Date: new Date(),
     ACN: "Pay Your Payments"
   })
@@ -250,11 +250,24 @@ router.post("/uctype", (req, res) => {
 const fs = require("fs");
 
 router.post("/pdf", (req, res) => {
-  console.log(req);
   var file = fs.createReadStream(
-    `${__dirname}/client/public/uploads/${req.body.FileName}.pdf`
+    `./client/public/uploads/${req.body.FileName}`
   );
   file.pipe(res);
+});
+
+router.post("/check", (req, res) => {
+  Company.findOne({ CompanyName: req.body.name })
+    .then(projects => {
+      if (projects) {
+        res.json({ message: "Yes" });
+      } else {
+        res.json({ message: "No" });
+      }
+    })
+    .catch(err => {
+      res.json({ message: "No" });
+    });
 });
 
 module.exports = router;

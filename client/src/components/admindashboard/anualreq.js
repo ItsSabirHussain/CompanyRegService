@@ -137,7 +137,7 @@ export default function AnualReq(props) {
               className={classes.submit}
               onClick={onClick}
             >
-              Send
+              Check
             </Button>
           </Grid>
 

@@ -37,7 +37,6 @@ import ModifyProject from "./modifyproject";
 import Notifications from "./notifications";
 import UploadedDocs from "./uploadeddocs";
 import AnualReq from "./anualreq";
-import FileViewer from "./FileViewer";
 
 const drawerWidth = 240;
 
@@ -233,12 +232,6 @@ export default function AdminDashboard(props) {
               </ListItemIcon>
               <ListItemText primary="Anual Docs. Req. " />
             </ListItem>
-            <ListItem button component={Link} to="/ceodashboard/allfiles">
-              <ListItemIcon>
-                <PermIdentityIcon fontSize="large" />
-              </ListItemIcon>
-              <ListItemText primary="List of files " />
-            </ListItem>
           </div>
         </List>
         <Divider />
@@ -267,7 +260,6 @@ export default function AdminDashboard(props) {
           component={Notifications}
         />
         <Route exact path="/ceodashboard/anualreq" component={AnualReq} />
-        <Route exact path="/ceodashboard/allfiles" component={FileViewer} />
       </Switch>
     </div>
   );

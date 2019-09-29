@@ -11,6 +11,7 @@ const Company = require("../models/projectinfo");
 const BidStatus = require("../models/bidstatus");
 const ANoti = require("../models/anoti");
 const CNoti = require("../models/unoti");
+const Uploads = require("../models/uploads");
 
 router.post("/ceoreg", (req, res) => {
   CEO.findOne({ ID: req.body.ID }).then(ceo => {
@@ -96,7 +97,7 @@ router.post("/getallcomp", (req, res) => {
       return res.json(noti);
     } else {
       return res.json({
-        UserID: "None",
+        ID: "None",
         UserName: "None",
         CompanyName: "None",
         Address: "None",
@@ -119,6 +120,23 @@ router.post("/getanoti", (req, res) => {
           ID: "None",
           Date: "None",
           Content: "None"
+        });
+      }
+    })
+    .catch(err => {
+      res.json({ message: "Error" });
+    });
+});
+
+router.post("/getuploads", (req, res) => {
+  Uploads.find()
+    .then(noti => {
+      if (noti) {
+        return res.json(noti);
+      } else {
+        return res.json({
+          CompanyName: "None",
+          Date: "None"
         });
       }
     })
@@ -157,4 +175,5 @@ router.post("/areq", (req, res) => {
       res.json({ message: "succeeded" });
     });
 });
+
 module.exports = router;
