@@ -65,7 +65,9 @@ export default function CUserLogin(props) {
         console.log(res);
         props.history.push("/cuserdashboard");
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        alert("Invalid details");
+      });
   };
   return (
     <Container component="main" maxWidth="xs">

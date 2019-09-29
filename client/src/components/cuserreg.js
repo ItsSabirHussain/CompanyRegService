@@ -17,7 +17,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link to="/" style={{ textDecoration: "none" }}>
-        The website{" "}
+        Active Tax Service{" "}
       </Link>
       {new Date().getFullYear()}
       {"."}
@@ -67,7 +67,7 @@ export default function CUserReg(props) {
         props.history.push("/cuserlogin");
       })
       .catch(error => {
-        console.log(error);
+        alert("User already exits");
       });
   };
 

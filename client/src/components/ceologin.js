@@ -66,7 +66,9 @@ export default function CEOLogin(props) {
         console.log(res);
         props.history.push("/ceodashboard");
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        alert("Invalid details.");
+      });
   };
 
   return (

@@ -32,7 +32,6 @@ import { Jumbotron } from "react-bootstrap";
 import Main from "./main";
 import ModifyProjectData from "./mondifyprojectdata";
 import ProjectAnalysis from "./projectanalysis";
-import AddBid from "./addbid";
 import ModifyProject from "./modifyproject";
 import Notifications from "./notifications";
 import UploadedDocs from "./uploadeddocs";
