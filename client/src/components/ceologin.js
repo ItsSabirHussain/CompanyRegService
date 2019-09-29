@@ -117,9 +117,6 @@ export default function CEOLogin(props) {
           >
             Sign In
           </Button>
-          <Grid container>
-            <Grid item></Grid>
-          </Grid>
         </form>
       </div>
       <Box mt={8}>
