@@ -32,7 +32,7 @@
     "passport-local": "^1.0.0",
     "random-int": "^2.0.1",
     "react-strap": "0.0.1",
-    "validator": "^11.1.0",
+    "validator": "^13.7.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {
