@@ -17,7 +17,7 @@
     "react-dropzone": "^10.1.9",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "react-strap": "0.0.1",
     "styled-components": "^4.2.0"
   },
